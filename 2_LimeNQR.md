@@ -1,6 +1,8 @@
 # 2. LimeNQR Tutorial 🦆
 ## Introduction
-The LimeNQR spectrometer can be used with the NQRduck program. 
+The LimeNQR spectrometer can be used with the NQRduck program for magnetic resonance experiments.
+
+This tutorial will show you how to use the LimeNQR spectrometer with the NQRduck program. We will perform a loopback measurement, a TX check, and a NQR measurement on a sample. 
 
 ## Requirements
 - All requirements from the [NQRduck Setup Tutorial](0_NQRduck_Setup.md)
