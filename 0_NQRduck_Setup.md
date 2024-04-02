@@ -26,5 +26,5 @@ This Tutorial gives a short overview of how to setup the NQRduck program. The NQ
 
 5. You can switch between different modules with the toolbar. The installed modules should be "Measurement" and "Spectrometer". You can also check all available modules by opening "Help" -> "About Modules".
 
-6. If you don't like how the program looks, you can change the appearance in "Settings" -> "Preferences". Settings are saved and restored on the next start.
+6. If you don't like how the program looks, you can change the appearance in "Settings" -> "Preferences". Settings are saved and restored on the next start. Updating of the plot font size requires a restart of the program.
 
