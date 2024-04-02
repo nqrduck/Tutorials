@@ -24,7 +24,8 @@ This Tutorial gives a short overview of how to setup the NQRduck program. The NQ
     ```
 4. Run the program with `nqrduck`. This should open up a window with the NQRduck program.
 
-5. You can switch between different modules with the toolbar. The installed modules should be "Measurement" and "Spectrometer". You can also check all available modules by opening "Help" -> "About Modules".
+5. You can switch between different modules with the toolbar. The installed modules should be `Measurement` and `Spectrometer`. You can also check all available modules by opening `Help -> About Modules`.
 
-6. If you don't like how the program looks, you can change the appearance in "Settings" -> "Preferences". Settings are saved and restored on the next start. Updating of the plot font size requires a restart of the program.
+6. If you don't like how the program looks, you can change the appearance in `Settings -> Preferences`. Settings are saved and restored on the next start. Updating of the plot font size requires a restart of the program.
 
+7. Continue the tutorial with the [NQRduck Simulator Tutorial](1_Simulator.md).
