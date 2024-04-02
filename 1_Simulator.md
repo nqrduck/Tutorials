@@ -31,7 +31,7 @@ This Tutorial gives a short overview of how to use the NQRduck Simulator. The NQ
 | **d.)** The Pulse Parameters for the RX Event. |
 | **e.)** The duration of the different events. |
 
-
+You can add new `Events` by clicking on the `New Event` button. `Events` can be moved by clicking the purple Arrows. You can delete an `Event` by clicking on the garbage can icon. The `Event` duration and name can be changed.
 
 4. You can now adjust the settings  of the Simulator on the right side. Different settings are for example the number of simulation points or the noise level.
 
@@ -52,7 +52,9 @@ This Tutorial gives a short overview of how to use the NQRduck Simulator. The NQ
 11. We will now run these sequences on the real hardware. See [Tutorial 2](2_LimeNQR.md) for more information.
 
 ## Notes:
-With some of the last updates I broke the signal processing options. I will fix this in the next update. For now, you can only simulate the signal and not process it. Or you can try the apodization but the program might crash.
+- With some of the last updates I broke the signal processing options. I will fix this in the next updates. For now, you can only simulate the signal and not process it. Or you can try the apodization but the program might crash.
+
+- The `Measurement Frequency` doesn't have any effect on the simulation right now. It is only used for the real hardware.
 
 <!-- TODO:
 Screenshot of the pulse programmer with a simple FID sequence
