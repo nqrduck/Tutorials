@@ -36,9 +36,9 @@ This is a simple test to check if the LimeNQR spectrometer is working correctly.
 
 2. Connect the USB cable of the LimeNQR spectrometer to your computer. 
 
-3. Load the FID pulse sequence int the `Pulse Programmer`. You can use the same sequence as in the [NQRduck Simulator Tutorial](1_Simulator.md).
+3. Load the FID pulse sequence into the `Pulse Programmer`. You can use the same sequence as in the [NQRduck Simulator Tutorial](1_Simulator.md).
 
-4. Adjust the RX event to occur at the same time as the ADC Readout. We will perform a "Loopback" measurement, where we observe the output signal of of the LImeNQR spectrometer.
+4. Adjust the RX event to occur at the same time as the TX Pulse. We will perform a "Loopback" measurement, where we observe the output signal of of the LImeNQR spectrometer.
 
 5. Connect the TX and RX ports of the LimeNQR spectrometer with a SMA cable and a 20dB attenuator.
 

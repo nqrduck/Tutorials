@@ -41,7 +41,7 @@ Advisable durations for the different events are:
 
 4. You can now adjust the settings  of the Simulator on the right side. Different settings are for example the number of simulation points or the noise level.
 
-5. To start the simulation, switch back to the `Measurement` tab. Enter a `Target Frequency` of 83.56MHy and 100 `Averages`. Now press the `Start Measurement` button.
+5. To start the simulation, switch back to the `Measurement` tab. Enter a `Target Frequency` of 83.56MHz and 100 `Averages`. Now press the `Start Measurement` button.
 
 6. You should see an exponential decay in the plot. This is the FID signal that you just simulated.
  - The signal might look weird if you didn't set the correct Pulse Parameters. Try to adjust either the length of your TX event or the pulse power to achieve a $\frac{\pi}{2}$ flip angle.
@@ -58,7 +58,7 @@ Advisable durations for the different events are:
 11. We will now run these sequences on the real hardware. See [Tutorial 2](2_LimeNQR.md) for more information.
 
 ## Notes:
-- With some of the last updates I broke the signal processing options. I will fix this in the next updates. For now, you can only simulate the signal and not process it. Or you can try the apodization but the program might crash.
+- With some of the last updates I broke the signal processing options. I will fix this in the next updates. For now, you can only simulate the signal and not process it.
 
 - The `Measurement Frequency` doesn't have any effect on the simulation right now. It is only used for the real hardware.
 
