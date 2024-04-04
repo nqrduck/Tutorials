@@ -24,6 +24,17 @@ This tutorial will show you how to use the LimeNQR spectrometer with the NQRduck
     pip install "nqrduck-spectrometer-limenqr @ git+https://github.com/nqrduck/nqrduck-spectrometer-limenqr"
     ```
 
+### Safety Tips ⚠️
+- Don't leave the low noise amplifier (LNA) unconnected on the in- and output. This could damage the LNA.
+
+- Don't output a pulse without a load connected to the TX port. This could damage the RFPA.
+
+- Don't pulse at any other where the probe coil is not tuned and matched. This could damage the setup.
+
+- Don't forget the TR event in your pulse sequence. This could damage the setup.
+
+- Make sure the Pre Amplifier is cooled. It will burn out otherwise.
+
 ## Steps (Linux)
 ### Loopback Measurement
 This is a simple test to check if the LimeNQR spectrometer is working correctly. We measure the output signal of the LimeNQR spectrometer with the receive path of the LimeNQR spectrometer.
@@ -111,17 +122,6 @@ The experiment now has to be set up as follows:
 ⚠️CAREFUL!⚠️ You need to tune and match the probe coil again after removing the sample.
 
 7. You can now also try a Spin Echo if the FID worked. If you have very long sequences, make sure to increase the `Acquisition Time` in the `Spectrometer` settings.
-
-### Safety Tips ⚠️
-- Don't leave the low noise amplifier (LNA) unconnected on the in- and output. This could damage the LNA.
-
-- Don't output a pulse without a load connected to the TX port. This could damage the RFPA.
-
-- Don't pulse at any other where the probe coil is not tuned and matched. This could damage the setup.
-
-- Don't forget the TR event in your pulse sequence. This could damage the setup.
-
-- Make sure the Pre Amplifier is cooled. It will burn out otherwise.
 
 ## Additional Information
 
