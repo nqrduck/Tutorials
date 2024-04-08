@@ -35,6 +35,8 @@ This tutorial will show you how to use the LimeNQR spectrometer with the NQRduck
 
 - Make sure the Pre Amplifier is cooled. It will burn out otherwise.
 
+- If you get an error when running measurements with the LimeNQR spectrometer, try another USB port. USB 3.0 ports are recommended. Also try to use a port that is directly connected to the motherboard.
+
 ## Steps (Linux)
 ### Loopback Measurement
 This is a simple test to check if the LimeNQR spectrometer is working correctly. We measure the output signal of the LimeNQR spectrometer with the receive path of the LimeNQR spectrometer.
@@ -72,15 +74,19 @@ Here we will perform a test if the Radio Frequency Power Amplifier (RFPA) is wor
 
 1. Load the FID pulse sequence in the `Pulse Programmer`. You can use the same sequence as in the [NQRduck Simulator Tutorial](1_Simulator.md). Make sure to add an TR event to the sequence. The last event in your pulse sequence will always be interpreted as the TR time. If you don't add a TR event, the duty cycle of the TX pulse might be too high and you could damage things. 
 
-2. We use a pre-amplifier to amplify the signal of the LimeNQR spectrometer. Connect the TX port of the LimeNQR spectrometer to the Pre Amplifier. Connect the Pre Amplifier to the 12V Power Supply. Make sure the Pre Amplifier is cooled because it will burn out otherwise. The RX port of the LimeNQR spectrometer can stay unconnected. 
+2. We use a pre-amplifier to amplify the signal of the LimeNQR spectrometer. Connect the TX port of the LimeNQR spectrometer to the Pre Amplifier. Connect the Pre Amplifier to the 12V Power Supply. Make sure the Pre Amplifier is cooled because it will burn out otherwise. The RX port of the LimeNQR spectrometer can stay unconnected. Connect the Dummy Load to the Probe Port of the transcoupler. 
 
 3. Connect the gate of the LimeNQR to the oscilloscope on Channel 1. Trigger on a rising flank on Channel 1. Use a timescale that makes sense for your pulse sequence.
 
-4. Observe the pulse on Channel 2 of the oscilloscope, by connecting it to the Directional Coupler (FWD). Use AC coupling. 
+4. Go to the spectrometer `Settings` and set the `TX gain` to `10`.
 
-5. Go to the spectrometer `Settings` and set the `TX gain` to `10`.
+5. Turn on the RFPA - you should hear the cooling fan of the RFPA spinning.
 
-6. Set the `Target Frequency` to 83.56 MHz and the number of `Averages` to 100. Click `Start Measurement`. You should see the pulse on the oscilloscope. The blue trace is the Gate Signal and the yellow trace is the TX pulse.
+6. Plug in the LimeNQR spectrometer you should hear the LimeNQR fan spinning.
+
+7. Set the `Target Frequency` to 83.56 MHz and the number of `Averages` to 100. Click `Start Measurement`. You should see the pulse on the oscilloscope. The blue trace is the Gate Signal and the yellow trace is the TX pulse.
+
+8. Observe the pulse on Channel 2 of the oscilloscope, by connecting it to the Directional Coupler (FWD). Use AC coupling. 
 
 ### NQR Measurement
 We will now perform a NQR measurement on a sample. We will use the BiPh3 sample for this tutorial.
@@ -107,6 +113,7 @@ The experiment now has to be set up as follows:
 - [ ] Connect the Pre Amplifier to the 12V Power Supply. Maker sure the Pre Amplifier is cooled because it will burn out otherwise.
 - [ ] Connect the RX port of the LimeNQR spectrometer to Low Noise Amplifier (LNA).
 - [ ] Connect the LNA to the 5V Power Supply.
+- [ ] Connect the probe coil to the probe port of the transcoupler.
 
 | <img src="Figures/2_fullmeas_pic.jpg" width=100%> |
 |:--:|
