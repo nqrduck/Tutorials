@@ -1,4 +1,9 @@
 # LimeNQR
+
+| <img src="../Figures/D_limenqr.jpg" width=70%> |
+|:--:|
+| Figure: Picture of the LimeNQR spectrometer.|
+
 ## Connections
 
 The LimeNQR has 5 different connections:
