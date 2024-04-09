@@ -17,3 +17,4 @@ The LimeNQR has 5 different connections:
 - The LimeNQR has a cooling fan that is turned on when the 12V Power Supply is connected.
 - The LimeNQR has a gate signal that is enabled on when the 12V Power Supply is connected. However the gate signal stays low until you output a pulse. The gate signal is high during the pulse and low otherwise as specified in the spectrometer settings.
 - Don't go higher than a sampling rate of 30.72 MHz. This makes the communication between the LimeNQR and the computer unstable.
+- If you get an error when running measurements with the LimeNQR spectrometer, try another USB port. USB 3.0 ports are recommended. Also try to use a port that is directly connected to the motherboard.

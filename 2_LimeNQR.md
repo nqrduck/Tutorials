@@ -1,8 +1,8 @@
 # 2. LimeNQR Tutorial 🦆
 ## Introduction
-The LimeNQR spectrometer can be used with the NQRduck program for magnetic resonance experiments.
+The [LimeNQR](docs/LimeNQR.md) spectrometer can be used with the NQRduck program for magnetic resonance experiments.
 
-This tutorial will show you how to use the LimeNQR spectrometer with the NQRduck program. We will perform a loopback measurement, a TX check, and a NQR measurement on a sample. 
+This tutorial will show you how to use the [LimeNQR](docs/LimeNQR.md) spectrometer with the NQRduck program. We will perform a loopback measurement, a TX check, and a NQR measurement on a sample. 
 
 ## Requirements
 - All requirements from the [NQRduck Setup Tutorial](0_NQRduck_Setup.md)
@@ -25,15 +25,15 @@ This tutorial will show you how to use the LimeNQR spectrometer with the NQRduck
     ```
 
 ### ⚠️ Safety Tips ⚠️
-- Don't leave the low noise amplifier (LNA) unconnected on the in- and output. This could damage the LNA.
+- Don't leave the [low noise amplifier (LNA)](docs/LNA.md) unconnected on the in- and output. This could damage the [LNA](docs/LNA.md).
 
-- Don't output a pulse without a load connected to the TX port. This could damage the RFPA.
+- Don't output a pulse without a load connected to the TX port. This could damage the [Radio Frequency Amplifier (RFPA)](docs/RFPA.md).
 
 - Don't pulse at any other where the probe coil is not tuned and matched. This could damage the setup.
 
 - Don't forget the TR event in your pulse sequence. This could damage the setup.
 
-- Make sure the Pre Amplifier is cooled. It will burn out otherwise.
+- Make sure the [Pre Amplifier](docs/PreAmp.md) is cooled. It will burn out otherwise.
 
 - If you get an error when running measurements with the LimeNQR spectrometer, try another USB port. USB 3.0 ports are recommended. Also try to use a port that is directly connected to the motherboard.
 
@@ -66,7 +66,7 @@ This is a simple test to check if the LimeNQR spectrometer is working correctly.
 8. You can also observe the signal in frequency space by clicking on the `FFT` button in the measurement module.
 
 ### TX Check
-Here we will perform a test if the Radio Frequency Power Amplifier (RFPA) is working correctly. We will measure the output signal of the RFPA by pulsing into a 50 Ohm dummy load and observing the signal with an oscilloscope. 
+Here we will perform a test if the [RFPA](docs/RFPA.md is working correctly. We will measure the output signal of the [RFPA](docs/RFPA.md) by pulsing into a 50 Ohm dummy load and observing the signal with an oscilloscope. 
 
 | <img src="Figures/2_dummy_load.jpg" width=40%> |
 |:--:|
@@ -74,13 +74,13 @@ Here we will perform a test if the Radio Frequency Power Amplifier (RFPA) is wor
 
 1. Load the FID pulse sequence in the `Pulse Programmer`. You can use the same sequence as in the [NQRduck Simulator Tutorial](1_Simulator.md). Make sure to add an TR event to the sequence. The last event in your pulse sequence will always be interpreted as the TR time. If you don't add a TR event, the duty cycle of the TX pulse might be too high and you could damage things. 
 
-2. We use a pre-amplifier to amplify the signal of the LimeNQR spectrometer. Connect the TX port of the LimeNQR spectrometer to the Pre Amplifier. Connect the Pre Amplifier to the 12V Power Supply. Make sure the Pre Amplifier is cooled because it will burn out otherwise. The RX port of the LimeNQR spectrometer can stay unconnected. Connect the Dummy Load to the Probe Port of the transcoupler. 
+2. We use a [pre-amplifier](docs/PreAmp.md) to amplify the signal of the LimeNQR spectrometer. Connect the TX port of the LimeNQR spectrometer to the Pre Amplifier. Connect the Pre Amplifier to the 12V Power Supply. Make sure the Pre Amplifier is cooled because it will burn out otherwise. The RX port of the LimeNQR spectrometer can stay unconnected. Connect the Dummy Load to the Probe Port of the [transcoupler](docs/Transcoupler.md). 
 
 3. Connect the gate of the LimeNQR to the oscilloscope on Channel 1. Trigger on a rising flank on Channel 1. Use a timescale that makes sense for your pulse sequence.
 
 4. Go to the spectrometer `Settings` and set the `TX gain` to `10`.
 
-5. Turn on the RFPA - you should hear the cooling fan of the RFPA spinning.
+5. Turn on the [RFPA](docs/RFPA.md - you should hear the cooling fan of the [RFPA](docs/RFPA.md spinning.
 
 6. Plug in the LimeNQR spectrometer you should hear the LimeNQR fan spinning.
 
@@ -97,7 +97,7 @@ We will now perform a NQR measurement on a sample. We will use the BiPh3 sample 
 
 1. Load the NQR pulse sequence in the `Pulse Programmer` by clicking the `Load pulse sequence`. You can use the same sequence as in the NQRduck Simulator Tutorial. Make sure not to use the Loopback measurement where the RX event occurs at the same time as the TX pulse.
 
-2. Put the sample into the probe coil and tune and match it at 83.56 MHz using a Network Analyzer. You can find detailed instructions at [Tuning and Matching](###Tuning-and-Matching).
+2. Put the sample into the probe coil and tune and match it at 83.56 MHz using a Network Analyzer. You can find detailed instructions at [Tuning and Matching](docs/TuningAndMatching.md).
 
 3. Connections ⚡: 
 
@@ -108,12 +108,12 @@ The experiment now has to be set up as follows:
 | Figure: Schematic of the NQR measurement setup. The power connections are not depicted. |
 
 - [ ] Connect the 12V Power Supply to the LimeNQR spectrometer and the USB cable to your computer.
-- [ ] Connect the Gate of the LimeNQR spectrometer to the Gate of the Power Amplifier.
+- [ ] Connect the Gate of the LimeNQR spectrometer to the Gate of the [RFPA](docs/RFPA.md.
 - [ ] Connect the TX port of the LimeNQR spectrometer to the Pre Amplifier.
 - [ ] Connect the Pre Amplifier to the 12V Power Supply. Maker sure the Pre Amplifier is cooled because it will burn out otherwise.
-- [ ] Connect the RX port of the LimeNQR spectrometer to Low Noise Amplifier (LNA).
-- [ ] Connect the LNA to the 5V Power Supply.
-- [ ] Connect the probe coil to the probe port of the transcoupler.
+- [ ] Connect the RX port of the LimeNQR spectrometer to [LNA](docs/LNA.md).
+- [ ] Connect the [LNA](docs/LNA.md) to the 5V Power Supply.
+- [ ] Connect the probe coil to the probe port of the [transcoupler](docs/Transcoupler.md).
 
 | <img src="Figures/2_fullmeas_pic.jpg" width=100%> |
 |:--:|
